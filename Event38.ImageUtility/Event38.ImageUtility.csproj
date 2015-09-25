@@ -1,0 +1,459 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1B105820-1A4B-4608-B360-43813CBC7BE5}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Event38.ImageUtility</RootNamespace>
+    <AssemblyName>Event38.ImageUtility</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>9f0df66b</NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>D986A2B8E7255D96759EE803E77CF8F0B4B11E68</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Event38.ImageUtility_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AWSSDK, Version=2.3.43.0, Culture=neutral, PublicKeyToken=9f476d3089b52be3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x86\Debug\AWSSDK.dll</HintPath>
+    </Reference>
+    <Reference Include="Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Dlls.1.0.0\lib\Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DotSpatial.Data, Version=1.6.0.0, Culture=neutral, PublicKeyToken=c29dbf30e059ca9d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Dlls.1.0.0\lib\DotSpatial.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="DotSpatial.Projections, Version=1.6.0.0, Culture=neutral, PublicKeyToken=272632bddd08a38b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Dlls.1.0.0\lib\DotSpatial.Projections.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV, Version=2.9.0.1922, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Dlls.1.0.0\lib\Emgu.CV.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.Stitching, Version=2.9.0.1922, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Dlls.1.0.0\lib\Emgu.CV.Stitching.dll</HintPath>
+    </Reference>
+    <Reference Include="GeoUtility, Version=3.1.7.5, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dlls.1.0.0\lib\GeoUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.Core, Version=1.7.0.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Dlls.1.0.0\lib\GMap.NET.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.WindowsForms, Version=1.7.0.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Dlls.1.0.0\lib\GMap.NET.WindowsForms.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.WindowsPresentation, Version=1.7.0.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Dlls.1.0.0\lib\GMap.NET.WindowsPresentation.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Dlls.1.0.0\lib\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip.Reduced, Version=1.9.1.5, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Dlls.1.0.0\lib\Ionic.Zip.Reduced.dll</HintPath>
+    </Reference>
+    <Reference Include="LibCurlNet, Version=1.3.0.0, Culture=neutral, PublicKeyToken=dfa5e73bd1f79635, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Dlls.1.0.0\lib\LibCurlNet.dll</HintPath>
+    </Reference>
+    <Reference Include="LibTIFF.NET, Version=3.8.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Dlls.1.0.0\lib\LibTIFF.NET.DLL</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.11.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Dlls.1.0.0\lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Magick.NET-AnyCPU, Version=6.0.0.0, Culture=neutral, PublicKeyToken=2004825badfa91ec, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Dlls.1.0.0\lib\Magick.NET-AnyCPU.dll</HintPath>
+    </Reference>
+    <Reference Include="MAVLink, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Dlls.1.0.0\lib\MAVLink.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualC" />
+    <Reference Include="MissionPlanner, Version=1.1.5565.19026, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Dlls.1.0.0\lib\MissionPlanner.dll</HintPath>
+    </Reference>
+    <Reference Include="MissionPlanner.Comms, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Dlls.1.0.0\lib\MissionPlanner.Comms.dll</HintPath>
+    </Reference>
+    <Reference Include="MissionPlanner.Controls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Dlls.1.0.0\lib\MissionPlanner.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="MissionPlanner.Utilities, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Dlls.1.0.0\lib\MissionPlanner.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="ProjNet, Version=1.2.4455.27045, Culture=neutral, PublicKeyToken=a1f5bdcd9c6f5740, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Dlls.1.0.0\lib\ProjNet.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpKml, Version=1.1.0.0, Culture=neutral, PublicKeyToken=e608cd7d975805ad, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Dlls.1.0.0\lib\SharpKml.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Reactive.Core, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Dlls.1.0.0\lib\System.Reactive.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Interfaces, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Dlls.1.0.0\lib\System.Reactive.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Linq, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Dlls.1.0.0\lib\System.Reactive.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.PlatformServices, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Dlls.1.0.0\lib\System.Reactive.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Transitions, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Dlls.1.0.0\lib\Transitions.dll</HintPath>
+    </Reference>
+    <Reference Include="ZedGraph, Version=5.1.5.1413, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Dlls.1.0.0\lib\ZedGraph.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CodeGen.cs" />
+    <Compile Include="CommsUDPSerialConnect.cs" />
+    <Compile Include="CurrentState.cs" />
+    <Compile Include="Helpers\ImageUtility.cs" />
+    <Compile Include="Hil.cs" />
+    <Compile Include="LogMap.cs" />
+    <Compile Include="LogSort.cs" />
+    <Compile Include="MainV2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainV2.designer.cs">
+      <DependentUpon>MainV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MavlinkLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MavLink\LogDownload.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MavLink\LogDownload.designer.cs">
+      <DependentUpon>LogDownload.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MavLink\LogDownloadMavLink.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MavLink\LogDownloadMavLink.designer.cs">
+      <DependentUpon>LogDownloadMavLink.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MavLink\Mavlink.cs" />
+    <Compile Include="MavLink\MavlinkCRC.cs" />
+    <Compile Include="MavLink\MAVLinkParam.cs" />
+    <Compile Include="MavLink\MAVLinkParamList.cs" />
+    <Compile Include="MavLink\MavlinkParse.cs" />
+    <Compile Include="MavLink\MAVState.cs" />
+    <Compile Include="MavLink\Strings.Designer.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Spline2.cs" />
+    <Compile Include="srtm.cs" />
+    <Compile Include="Terminal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Terminal.designer.cs">
+      <DependentUpon>Terminal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TerrainFollow.cs" />
+    <Compile Include="Vector3.cs" />
+    <Compile Include="VersionDetection.cs" />
+    <Compile Include="MavLink\MAVLinkInterface.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="_Classes\MAVState.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Content Include="DotSpatial.Projections.xml" />
+    <Content Include="GeoUtility.dll" />
+    <Content Include="GMap.NET.Core.xml" />
+    <Content Include="GMap.NET.WindowsPresentation.xml" />
+    <EmbeddedResource Include="Terminal.de-DE.resx">
+      <DependentUpon>Terminal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Terminal.es-ES.resx">
+      <DependentUpon>Terminal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Terminal.fr.resx">
+      <DependentUpon>Terminal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Terminal.it-IT.resx">
+      <DependentUpon>Terminal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Terminal.pl.resx">
+      <DependentUpon>Terminal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Terminal.resx">
+      <DependentUpon>Terminal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Terminal.ru-RU.resx">
+      <DependentUpon>Terminal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Terminal.zh-Hans.resx">
+      <DependentUpon>Terminal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Terminal.zh-Hant.resx">
+      <DependentUpon>Terminal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Terminal.zh-TW.resx">
+      <DependentUpon>Terminal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainV2.resx">
+      <DependentUpon>MainV2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainV2.zh-Hans.resx">
+      <DependentUpon>MainV2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainV2.zh-Hant.resx">
+      <DependentUpon>MainV2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainV2.zh-TW.resx">
+      <DependentUpon>MainV2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MavlinkLog.de-DE.resx">
+      <DependentUpon>MavlinkLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MavlinkLog.es-ES.resx">
+      <DependentUpon>MavlinkLog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MavlinkLog.fr.resx">
+      <DependentUpon>MavlinkLog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MavlinkLog.it-IT.resx">
+      <DependentUpon>MavlinkLog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MavlinkLog.pl.resx">
+      <DependentUpon>MavlinkLog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MavlinkLog.resx">
+      <DependentUpon>MavlinkLog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MavlinkLog.zh-Hans.resx">
+      <DependentUpon>MavlinkLog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MavLink\LogDownload.de-DE.resx">
+      <DependentUpon>LogDownload.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MavLink\LogDownload.es-ES.resx">
+      <DependentUpon>LogDownload.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MavLink\LogDownload.fr.resx">
+      <DependentUpon>LogDownload.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MavLink\LogDownload.it-IT.resx">
+      <DependentUpon>LogDownload.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MavLink\LogDownload.pl.resx">
+      <DependentUpon>LogDownload.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MavLink\LogDownload.resx">
+      <DependentUpon>LogDownload.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MavLink\LogDownload.zh-Hans.resx">
+      <DependentUpon>LogDownload.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MavLink\LogDownload.zh-TW.resx">
+      <DependentUpon>LogDownload.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MavLink\LogDownloadMavLink.de-DE.resx">
+      <DependentUpon>LogDownloadMavLink.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MavLink\LogDownloadMavLink.es-ES.resx">
+      <DependentUpon>LogDownloadMavLink.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MavLink\LogDownloadMavLink.fr.resx">
+      <DependentUpon>LogDownloadMavLink.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MavLink\LogDownloadMavLink.it-IT.resx">
+      <DependentUpon>LogDownloadMavLink.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MavLink\LogDownloadMavLink.pl.resx">
+      <DependentUpon>LogDownloadMavLink.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MavLink\LogDownloadMavLink.resx">
+      <DependentUpon>LogDownloadMavLink.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MavLink\LogDownloadMavLink.zh-Hans.resx">
+      <DependentUpon>LogDownloadMavLink.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MavLink\LogDownloadMavLink.zh-TW.resx">
+      <DependentUpon>LogDownloadMavLink.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
